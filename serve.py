@@ -8,7 +8,7 @@ app = Flask(__name__)
 def index():
     global seed
     if request.method == 'POST':
-        subprocess.Popen(['python', '-u', 'stress_cpu.py'])
+        subprocess.Popen(['python3', '-u', 'stress_cpu.py'])
     else:
         return f"{socket.gethostname()}"
 
